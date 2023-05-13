@@ -18,6 +18,7 @@ def dijkstra(graph, start, end):
             if new_distance < unvisited[neighbor]:
                 unvisited[neighbor] = new_distance
                 predecessors[neighbor] = current_node
+            print("Ahora estoy en el nodo: ",current_node, " con valor de : ",new_distance)
 
     path = []
     current_node = end
@@ -29,6 +30,7 @@ def dijkstra(graph, start, end):
             print("No se puede llegar al destino desde el nodo de inicio")
             break
     path.insert(0, start)
+   
     return visited[end], path
 
 if __name__ == '__main__':
